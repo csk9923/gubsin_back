@@ -1,0 +1,10 @@
+services:
+  api:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      DATABASE_URL: sqlite:////data/gubsin.db
+      FRONTEND_ORIGINS: http://localhost:3000,http://localhost:5173
+    volumes:
+      - ./data:/data
